@@ -1,32 +1,51 @@
 #!/bin/bash
 
+# =========================
+# CONFIGURAÇÕES
+# =========================
 DOWNLOADS="$HOME/Downloads"
 REPO="/Users/tmcnet/Desenvolvimento/git/tesouro-direto-dados"
 DESTINO="$REPO/precos"
+LOGDIR="$REPO/log"
+LOGFILE="$LOGDIR/atualizar_td.log"
 
-INVESTIR="rendimento-investir.csv"
-RESGATAR="rendimento-resgatar.csv"
+ARQUIVO="rendimento-resgatar.csv"
+TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
-# Valida existência dos arquivos
-if [ ! -f "$DOWNLOADS/$INVESTIR" ]; then
-  echo "Arquivo $INVESTIR não encontrado em Downloads"
+# =========================
+# INÍCIO
+# =========================
+echo "[$TIMESTAMP] Início da atualização Tesouro Direto" >> "$LOGFILE"
+
+# Verifica arquivo no Downloads
+if [ ! -f "$DOWNLOADS/$ARQUIVO" ]; then
+  echo "[$TIMESTAMP] ERRO: Arquivo $ARQUIVO não encontrado em Downloads" >> "$LOGFILE"
   exit 1
 fi
 
-if [ ! -f "$DOWNLOADS/$RESGATAR" ]; then
-  echo "Arquivo $RESGATAR não encontrado em Downloads"
+# Copia arquivo
+cp "$DOWNLOADS/$ARQUIVO" "$DESTINO/$ARQUIVO"
+if [ $? -ne 0 ]; then
+  echo "[$TIMESTAMP] ERRO: Falha ao copiar arquivo" >> "$LOGFILE"
   exit 1
 fi
 
-# Copia para o repositório
-cp "$DOWNLOADS/$INVESTIR" "$DESTINO/$INVESTIR"
-cp "$DOWNLOADS/$RESGATAR" "$DESTINO/$RESGATAR"
+echo "[$TIMESTAMP] Arquivo copiado com sucesso" >> "$LOGFILE"
 
+# Git operations
 cd "$REPO" || exit 1
 
-# Commit e push
-git add precos/$INVESTIR precos/$RESGATAR
-git commit -m "Atualização de preços Tesouro Direto"
-git push
+git add "precos/$ARQUIVO" "log/atualizar_td.log"
 
-echo "✔ CSVs atualizados e enviados para o GitHub"
+git commit -m "Atualização Tesouro Direto (resgate) - $TIMESTAMP" >> "$LOGFILE" 2>&1
+git push >> "$LOGFILE" 2>&1
+
+if [ $? -eq 0 ]; then
+  echo "[$TIMESTAMP] Git push executado com sucesso" >> "$LOGFILE"
+else
+  echo "[$TIMESTAMP] ERRO: Falha no git push" >> "$LOGFILE"
+  exit 1
+fi
+
+echo "[$TIMESTAMP] Fim da execução" >> "$LOGFILE"
+echo "----------------------------------------" >> "$LOGFILE"

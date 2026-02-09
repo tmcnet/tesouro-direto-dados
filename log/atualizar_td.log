@@ -1,2 +1,15 @@
 [2026-02-09 10:21:46] Início da atualização Tesouro Direto
 [2026-02-09 10:21:46] Arquivo copiado com sucesso
+[master e2038c0] Atualização Tesouro Direto (resgate) - 2026-02-09 10:21:46
+ 2 files changed, 64 insertions(+), 62 deletions(-)
+ create mode 100644 log/atualizar_td.log
+ rewrite precos/rendimento-resgatar.csv (88%)
+To https://github.com/tmcnet/tesouro-direto-dados.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/tmcnet/tesouro-direto-dados.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2026-02-09 10:21:46] ERRO: Falha no git push
