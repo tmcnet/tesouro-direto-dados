@@ -17,22 +17,32 @@ TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 # =========================
 echo "[$TIMESTAMP] Início da atualização Tesouro Direto" >> "$LOGFILE"
 
-# Verifica arquivo no Downloads
+# Verifica se o arquivo existe
 if [ ! -f "$DOWNLOADS/$ARQUIVO" ]; then
   echo "[$TIMESTAMP] ERRO: Arquivo $ARQUIVO não encontrado em Downloads" >> "$LOGFILE"
   exit 1
 fi
 
-# Copia arquivo
+# Copia o arquivo
 cp "$DOWNLOADS/$ARQUIVO" "$DESTINO/$ARQUIVO"
 if [ $? -ne 0 ]; then
-  echo "[$TIMESTAMP] ERRO: Falha ao copiar arquivo" >> "$LOGFILE"
+  echo "[$TIMESTAMP] ERRO: Falha ao copiar arquivo para o repositório" >> "$LOGFILE"
   exit 1
 fi
 
-echo "[$TIMESTAMP] Arquivo copiado com sucesso" >> "$LOGFILE"
+echo "[$TIMESTAMP] Arquivo copiado com sucesso para o repositório" >> "$LOGFILE"
 
-# Git operations
+# Remove o arquivo do Downloads
+rm "$DOWNLOADS/$ARQUIVO"
+if [ $? -ne 0 ]; then
+  echo "[$TIMESTAMP] ATENÇÃO: Não foi possível remover o arquivo do Downloads" >> "$LOGFILE"
+else
+  echo "[$TIMESTAMP] Arquivo removido do Downloads com sucesso" >> "$LOGFILE"
+fi
+
+# =========================
+# GIT
+# =========================
 cd "$REPO" || exit 1
 
 git add "precos/$ARQUIVO" "log/atualizar_td.log"
