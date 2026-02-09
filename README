@@ -1,0 +1,184 @@
+# Tesouro Direto – Automação de Preços (PU de Resgate)
+
+Este repositório contém uma automação completa para **atualização e versionamento dos preços unitários (PU de resgate) do Tesouro Direto**, com integração entre:
+
+- Download manual do CSV do site oficial (https://www.tesourodireto.com.br/produtos/dados-sobre-titulos/rendimento-dos-titulos)
+- Automação local no macOS
+- Versionamento no GitHub
+- Consumo automático via Google Sheets (Apps Script)
+
+O objetivo principal é **bater exatamente com o valor exibido pela corretora**, utilizando **marcação a mercado (PU de resgate)**.
+
+---
+
+## 🎯 Objetivo do Projeto
+
+- Permitir a atualização automática dos preços unitários dos títulos do tesouro em carteira
+- Centralizar uma **fonte confiável e versionada** dos preços do Tesouro Direto
+- Automatizar ao máximo o processo, mantendo controle e auditabilidade
+
+---
+
+## 📌 Princípio Fundamental
+
+> O valor patrimonial do Tesouro Direto deve ser calculado com base no  
+> **Preço Unitário de Resgate (PU de resgate)**, que reflete a marcação a mercado.
+
+Por isso, **este projeto utiliza exclusivamente o arquivo**: rendimento-resgatar.csv
+
+## 🧱 Arquitetura Geral
+
+```text
+Tesouro Direto (site oficial)
+        ↓
+Download manual do CSV (rendimento-resgatar.csv)
+        ↓
+macOS Automator (Folder Action)
+        ↓
+Script Bash (atualizar_td.sh)
+        ↓
+GitHub (repositório versionado)
+        ↓
+Google Apps Script
+        ↓
+Google Sheets (aba Tesouro Direto (Source) protegida)
+        ↓
+Planilha de controle da carteira
+
+⸻
+
+📂 Estrutura do Repositório
+
+tesouro-direto-dados/
+├── atualizar_td.sh          # Script principal de automação
+├── precos/
+│   └── rendimento-resgatar.csv
+├── log/
+│   └── atualizar_td.log     # Log versionado das execuções
+├── .gitignore
+└── README.md
+
+⸻
+
+⚙️ Componentes do Sistema
+
+1️⃣ Download Manual (Ponto de Controle)
+	•	O arquivo rendimento-resgatar.csv é baixado manualmente do site oficial do Tesouro Direto
+	•	Essa decisão é intencional, priorizando:
+	•	estabilidade
+	•	previsibilidade
+	•	conformidade com a fonte oficial
+
+⸻
+
+2️⃣ Automação Local (Automator macOS)
+
+🔹 Script Bash – atualizar_td.sh
+Responsabilidades:
+	•	Detectar o CSV na pasta Downloads
+	•	Copiar o arquivo para precos/
+	•	Remover o arquivo da pasta Downloads após cópia bem-sucedida
+	•	Registrar todas as ações em log
+	•	Executar git add, commit e push automaticamente
+
+Logs:
+	•	Gravados em log/atualizar_td.log
+	•	Versionados no Git para auditoria histórica
+
+⸻
+
+🔹 Automator (Folder Action)
+	•	Observa a pasta Downloads
+	•	Dispara automaticamente o script quando o arquivo: rendimento-resgatar.csv
+
+aparece na pasta
+
+Resultado:
+	•	Nenhuma ação manual além do download
+	•	Fluxo local totalmente automático
+
+⸻
+
+3️⃣ GitHub (Fonte Canônica)
+
+O GitHub funciona como:
+	•	Fonte única de verdade
+	•	Histórico completo de mudanças
+	•	Ponte entre o ambiente local e o Google Sheets
+
+A planilha nunca depende diretamente do computador local.
+
+⸻
+
+4️⃣ Google Apps Script
+
+Função principal:
+	•	atualizarTesouroDiretoSource()
+
+Responsabilidades:
+	•	Buscar o CSV diretamente do GitHub (raw)
+	•	Popular a aba Tesouro Direto (Source) com dados crus
+	•	Registrar metadados:
+	•	Data da última execução
+	•	Data do último commit do CSV
+	•	Aplicar formatação de data/hora
+	•	Aplicar indicador visual de “dados antigos”
+	•	Proteger automaticamente a aba contra edição manual
+
+⸻
+
+5️⃣ Google Sheets
+
+🔹 Aba: Tesouro Direto (Source)
+	•	Contém dados crus, sem fórmulas
+	•	É automaticamente protegida
+	•	Serve exclusivamente como fonte para:
+	•	PROCX / XLOOKUP
+	•	cálculos da carteira
+	•	consolidações
+
+Metadados visíveis:
+	•	Data da última execução do script
+	•	Data do último commit no GitHub
+	•	Indicador visual de atualização (verde / amarelo / vermelho)
+
+⸻
+
+🔐 Proteções e Segurança
+	•	Aba Tesouro Direto (Source) é protegida contra edição manual
+	•	Apps Script mantém permissão total de escrita
+	•	Logs permitem auditoria e diagnóstico ao longo do tempo
+
+⸻
+
+⏱️ Disparo do Google Apps Script
+	•	Disparo baseado em tempo (time-driven trigger)
+	•	Frequência recomendada:
+	•	1x por dia
+	•	O script é idempotente:
+	•	se o CSV não mudou, nada quebra
+	•	se mudou, a planilha reflete automaticamente
+
+⸻
+
+✅ Decisões de Design Importantes
+	•	❌ Não usar scraping
+	•	❌ Não depender de APIs instáveis
+	•	❌ Não automatizar login em site oficial
+	•	✅ Usar apenas dados oficiais
+	•	✅ Separar dados (SOURCE) de cálculo (carteira)
+	•	✅ Priorizar clareza e manutenção de longo prazo
+
+⸻
+
+📌 Conclusão
+
+Este repositório implementa uma automação simples, robusta e auditável para controle de preços do Tesouro Direto, com foco em:
+	•	confiabilidade
+	•	aderência à corretora
+	•	manutenção de longo prazo
+	•	mínima dependência externa
+
+O sistema foi projetado para continuar funcional e compreensível mesmo após anos sem manutenção.
+
+---
