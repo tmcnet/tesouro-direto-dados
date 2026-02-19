@@ -108,3 +108,46 @@ To https://github.com/tmcnet/tesouro-direto-dados.git
 [2026-02-13 11:52:14] Início da atualização Tesouro Direto
 [2026-02-13 11:52:14] Arquivo copiado com sucesso para o repositório
 [2026-02-13 11:52:14] Arquivo removido do Downloads com sucesso
+[master 591ebb1] Atualização Tesouro Direto (resgate) - 2026-02-13 11:52:14
+ 2 files changed, 120 insertions(+), 62 deletions(-)
+ rewrite precos/rendimento-resgatar.csv (93%)
+To https://github.com/tmcnet/tesouro-direto-dados.git
+   1eb1350..591ebb1  master -> master
+[2026-02-13 11:52:14] Git push executado com sucesso
+[2026-02-13 11:52:14] Fim da execução
+----------------------------------------
+[2026-02-14 11:18:19] Início da atualização Tesouro Direto
+[2026-02-14 11:18:19] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-14 11:18:56] Início da atualização Tesouro Direto
+[2026-02-14 11:18:56] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-14 11:20:56] Início da atualização Tesouro Direto
+[2026-02-14 11:20:56] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-15 08:02:21] Início da atualização Tesouro Direto
+[2026-02-15 08:02:21] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-15 08:03:45] Início da atualização Tesouro Direto
+[2026-02-15 08:03:45] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-15 08:09:27] Início da atualização Tesouro Direto
+[2026-02-15 08:09:27] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-17 11:34:34] Início da atualização Tesouro Direto
+[2026-02-17 11:34:34] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-17 11:34:34] Início da atualização Tesouro Direto
+[2026-02-17 11:34:34] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-17 11:34:35] Início da atualização Tesouro Direto
+[2026-02-17 11:34:35] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-17 11:34:36] Início da atualização Tesouro Direto
+[2026-02-17 11:34:36] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-18 09:09:24] Início da atualização Tesouro Direto
+[2026-02-18 09:09:24] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-18 09:11:52] Início da atualização Tesouro Direto
+[2026-02-18 09:11:52] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-18 09:16:15] Início da atualização Tesouro Direto
+[2026-02-18 09:16:15] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-18 09:21:22] Início da atualização Tesouro Direto
+[2026-02-18 09:21:22] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-18 14:38:55] Início da atualização Tesouro Direto
+[2026-02-18 14:38:55] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-18 14:39:39] Início da atualização Tesouro Direto
+[2026-02-18 14:39:39] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-02-18 21:22:25] Início da atualização Tesouro Direto
+[2026-02-18 21:22:25] Arquivo copiado com sucesso para o repositório
+[2026-02-18 21:22:25] Arquivo removido do Downloads com sucesso
