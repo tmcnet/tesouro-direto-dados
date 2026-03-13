@@ -484,3 +484,13 @@ fatal: Authentication failed for 'https://github.com/tmcnet/tesouro-direto-dados
 [2026-03-13 15:28:29] Início da atualização Tesouro Direto
 [2026-03-13 15:28:29] Arquivo copiado com sucesso para o repositório
 [2026-03-13 15:28:29] Arquivo removido do Downloads com sucesso
+[master ed75a35] Atualização Tesouro Direto (resgate) - 2026-03-13 15:28:29
+ 1 file changed, 8 insertions(+)
+To https://github.com/tmcnet/tesouro-direto-dados.git
+   99bb94b..ed75a35  master -> master
+[2026-03-13 15:28:29] Git push executado com sucesso
+[2026-03-13 15:28:29] Fim da execução
+----------------------------------------
+[2026-03-13 17:55:29] Início da atualização Tesouro Direto
+[2026-03-13 17:55:29] Arquivo copiado com sucesso para o repositório
+[2026-03-13 17:55:29] Arquivo removido do Downloads com sucesso
