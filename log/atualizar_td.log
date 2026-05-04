@@ -1194,3 +1194,13 @@ To https://github.com/tmcnet/tesouro-direto-dados.git
 [2026-05-04 17:43:19] Início da atualização Tesouro Direto
 [2026-05-04 17:43:19] Arquivo copiado com sucesso para o repositório
 [2026-05-04 17:43:19] Arquivo removido do Downloads com sucesso
+[master e539d1d] Atualização Tesouro Direto (resgate) - 2026-05-04 17:43:19
+ 2 files changed, 226 insertions(+), 60 deletions(-)
+To https://github.com/tmcnet/tesouro-direto-dados.git
+   593e093..e539d1d  master -> master
+[2026-05-04 17:43:19] Git push executado com sucesso
+[2026-05-04 17:43:19] Fim da execução
+----------------------------------------
+[2026-05-04 18:02:16] Início da atualização Tesouro Direto
+[2026-05-04 18:02:16] Arquivo copiado com sucesso para o repositório
+[2026-05-04 18:02:16] Arquivo removido do Downloads com sucesso
