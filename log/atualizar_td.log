@@ -1920,3 +1920,13 @@ To https://github.com/tmcnet/tesouro-direto-dados.git
 [2026-06-19 15:50:23] Início da atualização Tesouro Direto
 [2026-06-19 15:50:23] Arquivo copiado com sucesso para o repositório
 [2026-06-19 15:50:23] Arquivo removido do Downloads com sucesso
+[master 1921d24] Atualização Tesouro Direto (resgate) - 2026-06-19 15:50:23
+ 2 files changed, 141 insertions(+), 61 deletions(-)
+To https://github.com/tmcnet/tesouro-direto-dados.git
+   1c90d9a..1921d24  master -> master
+[2026-06-19 15:50:23] Git push executado com sucesso
+[2026-06-19 15:50:23] Fim da execução
+----------------------------------------
+[2026-06-23 09:11:51] Início da atualização Tesouro Direto
+[2026-06-23 09:11:51] Arquivo copiado com sucesso para o repositório
+[2026-06-23 09:11:51] Arquivo removido do Downloads com sucesso
