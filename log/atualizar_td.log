@@ -1958,3 +1958,19 @@ To https://github.com/tmcnet/tesouro-direto-dados.git
 [2026-06-27 15:53:39] Início da atualização Tesouro Direto
 [2026-06-27 15:53:39] Arquivo copiado com sucesso para o repositório
 [2026-06-27 15:53:39] Arquivo removido do Downloads com sucesso
+[master e19c86d] Atualização Tesouro Direto (resgate) - 2026-06-27 15:53:39
+ 2 files changed, 89 insertions(+), 61 deletions(-)
+To https://github.com/tmcnet/tesouro-direto-dados.git
+   6fc1e4e..e19c86d  master -> master
+[2026-06-27 15:53:39] Git push executado com sucesso
+[2026-06-27 15:53:39] Fim da execução
+----------------------------------------
+[2026-06-28 19:37:42] Início da atualização Tesouro Direto
+[2026-06-28 19:37:42] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-06-28 19:45:52] Início da atualização Tesouro Direto
+[2026-06-28 19:45:52] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-06-29 08:40:41] Início da atualização Tesouro Direto
+[2026-06-29 08:40:41] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-06-29 11:20:03] Início da atualização Tesouro Direto
+[2026-06-29 11:20:03] Arquivo copiado com sucesso para o repositório
+[2026-06-29 11:20:03] Arquivo removido do Downloads com sucesso
