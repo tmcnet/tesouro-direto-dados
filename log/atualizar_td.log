@@ -2522,3 +2522,31 @@ To https://github.com/tmcnet/tesouro-direto-dados.git
 [2026-09-02 09:00:46] Início da atualização Tesouro Direto
 [2026-09-02 09:00:46] Arquivo copiado com sucesso para o repositório
 [2026-09-02 09:00:46] Arquivo removido do Downloads com sucesso
+[master 24ce33a] Atualização Tesouro Direto (resgate) - 2026-09-02 09:00:46
+ 2 files changed, 121 insertions(+), 59 deletions(-)
+To https://github.com/tmcnet/tesouro-direto-dados.git
+   b18ecba..24ce33a  master -> master
+[2026-09-02 09:00:46] Git push executado com sucesso
+[2026-09-02 09:00:46] Fim da execução
+----------------------------------------
+[2026-09-02 11:49:06] Início da atualização Tesouro Direto
+[2026-09-02 11:49:06] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-02 18:12:11] Início da atualização Tesouro Direto
+[2026-09-02 18:12:11] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-02 18:12:51] Início da atualização Tesouro Direto
+[2026-09-02 18:12:51] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-03 08:06:49] Início da atualização Tesouro Direto
+[2026-09-03 08:06:49] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-03 08:06:52] Início da atualização Tesouro Direto
+[2026-09-03 08:06:52] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-03 09:22:22] Início da atualização Tesouro Direto
+[2026-09-03 09:22:22] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-03 21:38:24] Início da atualização Tesouro Direto
+[2026-09-03 21:38:24] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-07 11:03:26] Início da atualização Tesouro Direto
+[2026-09-07 11:03:26] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-07 11:03:55] Início da atualização Tesouro Direto
+[2026-09-07 11:03:55] ERRO: Arquivo rendimento-resgatar.csv não encontrado em Downloads
+[2026-09-08 14:38:38] Início da atualização Tesouro Direto
+[2026-09-08 14:38:38] Arquivo copiado com sucesso para o repositório
+[2026-09-08 14:38:38] Arquivo removido do Downloads com sucesso
